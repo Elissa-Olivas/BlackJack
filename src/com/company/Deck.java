@@ -13,9 +13,13 @@ public class Deck {
 //13 hearts- ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace
 //13 diamonds- ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace
 //13 clubs- ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace
-    private List<Card> deck = new ArrayList<>();
+    private List<Card> completeDeck = new ArrayList<>();
+//    private String suit;
+//    private String rank;
+//    private int value;
 
-    public Deck() {
+
+    public void buildDeck() {
         List<String> suit = new ArrayList<>();
         suit.add("Spades");
         suit.add("Heart");
@@ -37,7 +41,7 @@ public class Deck {
         rank.add("King");
         rank.add("Ace");
 
-        List value = new ArrayList();
+        List<Integer> value = new ArrayList<>();
         value.add(2);
         value.add(3);
         value.add(4);
@@ -47,20 +51,29 @@ public class Deck {
         value.add(8);
         value.add(9);
         value.add(10);
-        value.add(11);
-        value.add(11);
-        value.add(11);
+        value.add(10);
+        value.add(10);
+        value.add(10);
         value.add(11);
 
-        for (String s : suit) {
-            System.out.println(s);
-        }
-        for (String r : rank) {
-            System.out.println(r);
-        }
-        for (int v : value) {
-            System.out.println(v);
+    //method to build Array named completeDeck
+        for (int s = 0; s < suit.size(); s++) {
+            for (int r = 0; r < rank.size(); r++) {
+                for (int v = 0; v < value.size(); v++) {
+                    completeDeck.add(new Card(suit.get(s), rank.get(r), value.get(v)));//add suit and rank
+                }
+            }
         }
     }
-
+    public void printDeck() {
+        for (int n = 0; n < completeDeck.size(); n++) {
+            Card myCard= completeDeck.get(n);
+            String suit = myCard.getSuit();
+            String rank = myCard.getRank();
+            int value = myCard.getValue();
+            System.out.println(suit + " " + rank + " " + value);
+        }
+    }
 }
+
+
