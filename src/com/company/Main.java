@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
     Deck completeDeck = new Deck();
 
-    completeDeck.buildDeck();
+    completeDeck.deck();
     completeDeck.printDeck();
 
     }

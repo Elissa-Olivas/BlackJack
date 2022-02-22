@@ -19,7 +19,7 @@ public class Deck {
 //    private int value;
 
 
-    public void buildDeck() {
+    public void deck() {
         List<String> suit = new ArrayList<>();
         suit.add("Spades");
         suit.add("Heart");
@@ -72,8 +72,12 @@ public class Deck {
             String suit = myCard.getSuit();
             String rank = myCard.getRank();
             int value = myCard.getValue();
-            System.out.println(suit + " " + rank + " " + value);
+            System.out.println("Suit: " + suit + " Rank: " + rank + " Value: " + value);
         }
+    }
+
+    public List<Card> completeDeck() {
+        return completeDeck;
     }
 }
 
