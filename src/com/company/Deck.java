@@ -59,12 +59,13 @@ public class Deck {
     //method to build Array named completeDeck
         for (int s = 0; s < suit.size(); s++) {
             for (int r = 0; r < rank.size(); r++) {
-                for (int v = 0; v < value.size(); v++) {
-                    completeDeck.add(new Card(suit.get(s), rank.get(r), value.get(v)));//add suit and rank
+                    completeDeck.add(new Card(suit.get(s), rank.get(r), value.get(r)));//add suit and rank
                 }
             }
         }
-    }
+    //method to print deck cards to see if completeDeck method is right.
+    // within the BuildDeck constructor
+    //but outside the loop so it dosent print out each card to the player.
     public void printDeck() {
         for (int n = 0; n < completeDeck.size(); n++) {
             Card myCard= completeDeck.get(n);
