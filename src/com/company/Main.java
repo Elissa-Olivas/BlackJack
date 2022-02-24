@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Main {
@@ -14,18 +15,21 @@ public class Main {
     //		Super Bonus: Can you handle the dealer also playing a hand to see who wins with the closest score to 21?
 
     public static void main(String[] args) {
-        Deck completeDeck = new Deck();
+        Dealer completeDeck = new Dealer();
         Scanner myScanner = new Scanner(System.in);
         int userInput = myScanner.nextInt();
         boolean keepGoing = true;
-        completeDeck.deck();
-        completeDeck.printDeck();
+        Dealer deal = new Dealer();
+
+//        completeDeck.deck();
+//        completeDeck.printDeck();
         System.out.println("Lets Play BlackJack! Here are 2 cards to start: ");
 
         //might need to create a HAND method?
         do {
             completeDeck.deal();
-            if (completeDeck.deal()) ==21){
+
+            if (completeDeck.deal() == 21){
                 System.out.println("Congratulations you have Black Jack!");
             } else if (completeDeck.deal() < 21) {
                 System.out.println("Would you like to hit? Enter 1 for hit and 2 for Stay: ");
@@ -37,6 +41,7 @@ public class Main {
             }
 
         } while (keepGoing);
+    }
     }
 }
 

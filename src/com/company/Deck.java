@@ -14,10 +14,13 @@ public class Deck {
 //13 diamonds- ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace
 //13 clubs- ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace
     private List<Card> completeDeck = new ArrayList<>();
-//    private String suit;
+
+    //    private String suit;
 //    private String rank;
 //    private int value;
-
+    public List<Card> getCompleteDeck() {
+        return completeDeck;
+    }
 
     public void deck() {
         List<String> suit = new ArrayList<>();
@@ -56,19 +59,20 @@ public class Deck {
         value.add(10);
         value.add(11);
 
-    //method to build Array named completeDeck
+        //method to build Array named completeDeck
         for (int s = 0; s < suit.size(); s++) {
             for (int r = 0; r < rank.size(); r++) {
-                    completeDeck.add(new Card(suit.get(s), rank.get(r), value.get(r)));//add suit and rank
-                }
+                completeDeck.add(new Card(suit.get(s), rank.get(r), value.get(r)));//add suit and rank
             }
         }
+    }
+
     //method to print deck cards to see if completeDeck method is right.
     // within the BuildDeck constructor
     //but outside the loop so it dosent print out each card to the player.
     public void printDeck() {
         for (int n = 0; n < completeDeck.size(); n++) {
-            Card myCard= completeDeck.get(n);
+            Card myCard = completeDeck.get(n);
             String suit = myCard.getSuit();
             String rank = myCard.getRank();
             int value = myCard.getValue();
