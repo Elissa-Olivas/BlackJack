@@ -1,9 +1,11 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BlackJackGame {
-    Dealer completeDeck = new Dealer();
+    Dealer completedDeck = new Dealer();
     Scanner myScanner = new Scanner(System.in);
     int userInput = myScanner.nextInt();
     boolean keepGoing = true;
@@ -15,11 +17,12 @@ public class BlackJackGame {
 
             //might need to create a HAND method?
 
-            completeDeck.deal(); //this method deals 2 cards and prints out what cards you have
+            //this method deals 2 cards and prints out what cards you have
+            int x = completedDeck.deal();
 
-            if (completeDeck.deal() == 21){
+            if (x == 21){
                 System.out.println("Congratulations you have Black Jack!");
-            } else if (completeDeck.deal() < 21) {
+            } else if (x < 21) {
                 System.out.println("Would you like to hit? Enter 1 for hit and 2 for Stay: ");
                 if (userInput == 1) {
                     keepGoing = true;

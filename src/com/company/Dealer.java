@@ -21,7 +21,7 @@ public class Dealer {
         completedDeck = completeDeck.getCompleteDeck();
     }
 
-    public void deal() {
+    public int deal() {
         List<Card> dealTwoCards = new ArrayList<Card>();
 
         //get 2 random cards
@@ -32,9 +32,16 @@ public class Dealer {
         completedDeck.remove(0);
         completedDeck.remove(1);
 
+//        dealTwoCards.get(0).getValue();
+//        dealTwoCards.get(1).getValue();
+
+        int x = (dealTwoCards.get(0).getValue()) + (dealTwoCards.get(1).getValue());
+
+//    (dealTwoCards.add(completedDeck.get(randomCard.nextInt(0))));
 //        List<Card> myHand = new ArrayList<>();
 //        myHand = dealTwoCards;
-        System.out.println("The cards you have in our hand are: " + dealTwoCards);
+        System.out.println("The cards you have in our hand are: " + dealTwoCards + " with a total of " + x);
+        return x;
     }
 
 

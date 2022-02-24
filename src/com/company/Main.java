@@ -19,7 +19,8 @@ public class Main {
     public static void main(String[] args) {
         BlackJackGame letsPlay = new BlackJackGame();
 
-        BlackJackGame.playBlackJack();
+
+        letsPlay.playBlackJack();
 
 
 //        Dealer completeDeck = new Dealer();
