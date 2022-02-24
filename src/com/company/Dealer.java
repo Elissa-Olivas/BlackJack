@@ -8,6 +8,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Dealer {
     //method named Deal: returns 2 random Cards and removed them from the Deck
@@ -41,11 +42,13 @@ public class Dealer {
     public void hit() {
         completedDeck.get(randomCard.nextInt(0));
         completedDeck.remove(0);
+
     }
 
-//    public String toString() {
-//        return (dealTwoCards);
-//    }
+
+//        completeDeck.deck();
+//        completeDeck.printDeck();
+
 }
 
 
