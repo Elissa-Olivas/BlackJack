@@ -74,10 +74,7 @@ public class Deck {
             int value = myCard.getValue();
             System.out.println("Suit: " + suit + " Rank: " + rank + " Value: " + value);
         }
-    }
 
-    public List<Card> completeDeck() {
-        return completeDeck;
     }
 }
 

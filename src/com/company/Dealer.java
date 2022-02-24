@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class Dealer {
     //method named Deal: returns 2 random Cards and removed them from the Deck
-
+    Deck completeDeck = new Deck();
     Random randomCard = new Random(System.currentTimeMillis());
 
     public void deal() {
@@ -19,7 +19,7 @@ public class Dealer {
 
         //get 2 random cards
         dealTwoCards.add(completeDeck.get[randomCard.nextInt(0)]);
-        dealTwoCards.add(completeDeck.get[randomCard.nextInt(1)]);
+        dealTwoCards.add(completeDeck[randomCard.nextInt(1)].get());
 
         //remove these from deck
         completeDeck.remove(0);
@@ -35,4 +35,4 @@ public class Dealer {
 
 }
 
-}
+
